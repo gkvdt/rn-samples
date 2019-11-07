@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { connect } from "react-redux";
-import { increase, descrease } from '../redux/actions/counter'
+import { descrease, increase } from '../redux/actions/counter';
 
 class CounterScreen extends React.Component {
 

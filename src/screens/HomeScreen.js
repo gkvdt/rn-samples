@@ -13,6 +13,13 @@ export default class HomeScreen extends React.Component {
     }, {
       id: 2,
       screen: "TodoScreen"
+    }, {
+      id: 3,
+      screen: "AnimationScreen"
+    },
+    {
+      id: 4,
+      screen: "TabNavigation"
     }
   ]
 

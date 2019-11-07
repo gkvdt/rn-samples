@@ -3,7 +3,6 @@ import { View, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux'
 import { Ionicons } from '@expo/vector-icons';
 import { addTodo } from '../redux/actions/todo'
-
 import { TouchableOpacity, TextInput, FlatList } from 'react-native-gesture-handler';
 
 
@@ -14,21 +13,21 @@ class TodoScreen extends React.Component {
         this.state = {
             todo: "",
         }
-        this._addTodo = this._addTodo.bind(this)
+        this._addTodo = this._addTodo.bind(this);
     }
 
     render() {
-        return (
-            <View style={styles.container}>
-                <View style={styles.inputArea}>
-                    <TextInput value={this.state.todo} style={styles.input} onChangeText={e => this.setState({ todo: e })} />
-                    <TouchableOpacity onPress={this._addTodo} >
-                        <Ionicons name="ios-add" size={42} color="black" />
-                    </TouchableOpacity>
-                </View>
-                <FlatList
-                    data={this.props.todos}
-                    renderItem={({ item }) => this._renderItem(item)}
+      return (
+          <View style={styles.container}>
+              <View style={styles.inputArea}>
+                  <TextInput value={this.state.todo} style={styles.input} onChangeText={e => this.setState({ todo: e })} />
+                  <TouchableOpacity onPress={this._addTodo} >
+                      <Ionicons name="ios-add" size={42} color="black" />
+                  </TouchableOpacity>
+              </View>
+              <FlatList
+                  data={this.props.todos}
+                  renderItem={({ item }) => this._renderItem(item)}
                 />
             </View>
         )

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Animated, Text } from 'react-native'
+import { Animated,View, Text } from 'react-native'
 
 
 export class AnimationScreen extends Component {
